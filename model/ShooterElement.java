@@ -16,7 +16,6 @@ public class ShooterElement extends GameElement {
             g2.fillRect(x, y, width, height);
         } else {
             g2.drawRect(x, y, width, height);
-
         }
     }
 

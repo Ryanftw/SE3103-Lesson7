@@ -1,0 +1,42 @@
+package controller;
+
+import view.GameBoard;
+
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+public class KeyController implements KeyListener {
+
+    private GameBoard gameBoard;
+
+    public KeyController(GameBoard gameBoard) {
+        this.gameBoard = gameBoard;
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        int keycode = e.getKeyCode();
+        var eventQueue = gameBoard.getTimerListener().getEventQueue();
+        switch (keycode) {
+            case KeyEvent.VK_LEFT:
+                eventQueue.add(TimerListener.EventType.KEY_LEFT);
+                break;
+            case KeyEvent.VK_RIGHT:
+                eventQueue.add(TimerListener.EventType.KEY_RIGHT);
+                break;
+            case KeyEvent.VK_SPACE:
+                eventQueue.add(TimerListener.EventType.KEY_SPACE);
+                break;
+        }
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+
+    }
+}
