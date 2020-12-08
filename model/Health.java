@@ -2,13 +2,13 @@ package model;
 
 import java.awt.*;
 
-public class Bomb extends GameElement {
+public class Health extends GameElement {
 
     public static final int SIZE = 5;
     public static final int UNIT_MOVE = 5;
 
-    public Bomb(int x, int y) {
-        super(x, y, Color.green, true, SIZE, SIZE * 2);
+    public Health(int x, int y) {
+        super(x, y, Color.blue, true, SIZE, SIZE * 2);
     }
 
     @Override
@@ -23,6 +23,6 @@ public class Bomb extends GameElement {
 
     @Override
     public void animate() {
-        super.y += UNIT_MOVE;
+        // health does not move
     }
 }

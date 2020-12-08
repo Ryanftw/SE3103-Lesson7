@@ -16,7 +16,5 @@ public class Main {
         window.setResizable(false);
         window.pack();
         window.setVisible(true);
-
     }
-
 }

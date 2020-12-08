@@ -2,19 +2,19 @@ package model;
 
 import java.awt.*;
 
-public class Bullet extends  GameElement {
+public class Bullet extends GameElement {
 
     public static final int WIDTH = 5;
     public static final int UNIT_MOVE = 10;
 
     public Bullet(int x, int y) {
-        super(x, y, Color.red, true, WIDTH, WIDTH*3);
+        super(x, y, Color.red, true, WIDTH, WIDTH * 3);
     }
 
     @Override
     public void render(Graphics2D g2) {
         g2.setColor(color);
-        if(filled)
+        if (filled)
             g2.fillRect(x, y, width, height);
         else
             g2.drawRect(x, y, width, height);
